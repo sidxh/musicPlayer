@@ -197,6 +197,37 @@ const playAudio = () => {
   playButton.classList.add("hide");
 };
 
+// Adding the Spacebar-Pause functionality
+
+if (audio){
+    window.addEventListener('keydown', function (event){
+        const key = event.which || event.keyCode
+        if (key === 32) { // space
+            event.preventDefault();
+            if(audio.paused){
+                audio.play();
+                pauseButton.classList.remove("hide");
+                playButton.classList.add("hide");
+            } else {
+                audio.pause();
+                pauseButton.classList.add("hide");
+                playButton.classList.remove("hide");
+            }
+          } else if (key == 37) { // left arrow
+            event.preventDefault();
+            audio.currentTime = audio.currentTime - 10;
+          } else if (key == 39) { // right arrow
+            event.preventDefault();
+            audio.currentTime = audio.currentTime + 10;
+          } else if (key == 38){
+            nextSong()
+          } else if (key == 40){
+            previousSong()
+          }
+    });
+}
+
+
 //repeat button
 repeatButton.addEventListener("click", () => {
   if (repeatButton.classList.contains("active")) {
