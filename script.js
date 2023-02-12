@@ -91,6 +91,12 @@ const songsList = [
     image: "you-give-love-a-bad-name.jpg",
   },
   {
+    name: "Let Your Heart Hold Fast",
+    link: "hearts-hold-fast.mp3",
+    artist: "Fort Atlantic",
+    image: "himym.jpg",
+  },
+  {
     name: "Ophelia",
     link: "ophelia.mp3",
     artist: "The Lumineers",
@@ -107,12 +113,6 @@ const songsList = [
     link: "change-of-heart.mp3",
     artist: "The 1975",
     image: "somebody-else.jpg",
-  },
-  {
-    name: "Let Your Heart Hold Fast",
-    link: "hearts-hold-fast.mp3",
-    artist: "Fort Atlantic",
-    image: "himym.jpg",
   },
   {
     name: "If You Ever Forget",
