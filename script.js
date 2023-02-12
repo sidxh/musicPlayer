@@ -54,6 +54,12 @@ const songsList = [
     artist: "Venemy",
     image: "need-you-now.jpg",
   },
+  {
+    name: "Closer To The Picture",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Valley",
+    image: "closer-to-the-picture.jpg",
+  },
 ];
 
 //events object
