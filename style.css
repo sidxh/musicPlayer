@@ -13,7 +13,7 @@
     max-width: 25em;
     /* background: linear-gradient(to bottom, #000000 40%, #004985 50%); */
     border: 5px solid;
-    border-color: #343434;  
+    border-color: #000000;  
     background-color: #ffffff;
     padding: 3em 1.8em;
     position: absolute;
@@ -28,10 +28,14 @@
     display: none;
   }
 
+  .small-foot{
+    display: none;
+  }
+
   
   img {
     width: 100%;
-    margin-top: 1.25em;
+    margin: 1em 0;
   }
   #playlist {
     float: right;
@@ -198,6 +202,10 @@
 }
 
 @media (max-width:768px){
+    body{
+        background: linear-gradient(to bottom, #004985 35%, #000000 45%);
+    }
+
     .intro-div{
         display: none;
     }
@@ -213,6 +221,7 @@
         font-size: 1.85rem;
         text-align: center;
       }
+
 }
 
 
