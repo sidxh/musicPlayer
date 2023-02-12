@@ -207,7 +207,7 @@
 
     .small-head{
         display: block;
-        color: white;
+        color: rgb(0, 0, 0);
         font-family: 'Karla', sans-serif;
         font-size: 1.85rem;
         text-align: center;
