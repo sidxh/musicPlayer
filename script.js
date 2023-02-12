@@ -60,6 +60,103 @@ const songsList = [
     artist: "The Valley",
     image: "closer-to-the-picture.jpg",
   },
+  {
+    name: "Ophelia",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Lumineers",
+    image: "ophelia.jpg",
+  },
+  {
+    name: "Boots Of Spanish Leather",
+    link: "closer-to-the-picture.mp3",
+    artist: "Bob Dylan",
+    image: "boots.jpg",
+  },
+  {
+    name: "The Girl In The Car",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Lumineers",
+    image: "the-girl-in-the-car.jpeg",
+  },
+  {
+    name: "Love Of My Life",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Queen",
+    image: "love-of-my-life.jpg",
+  },
+  {
+    name: "Vienna",
+    link: "closer-to-the-picture.mp3",
+    artist: "Billy Joel",
+    image: "vienna.jpg",
+  },
+  {
+    name: "Light That Never Goes Out",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Smiths",
+    image: "asleep.jpg",
+  },
+  {
+    name: "Charlie's Last Letter",
+    link: "closer-to-the-picture.mp3",
+    artist: "Perks Of Being A Wallflower",
+    image: "perks.jpg",
+  },
+  {
+    name: "Romeo Julliet",
+    link: "closer-to-the-picture.mp3",
+    artist: "Peter McPoland",
+    image: "romio.jpg",
+  },
+  {
+    name: "Kilby Girl",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Backseat Lovers",
+    image: "kilby-girl.jpeg",
+  },
+  {
+    name: "Sunsetz",
+    link: "closer-to-the-picture.mp3",
+    artist: "Ciggrates After Sex",
+    image: "sunsetz.jpg",
+  },
+  {
+    name: "Money",
+    link: "closer-to-the-picture.mp3",
+    artist: "Pink Flyod",
+    image: "money.jpeg",
+  },
+  {
+    name: "You Give Love A Bad Name",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Lumineers",
+    image: "you-give-love-a-bad-name.jpg",
+  },
+  {
+    name: "Eye Of The Tiger",
+    link: "closer-to-the-picture.mp3",
+    artist: "Survivors",
+    image: "eye-of-the-tiger.jpg",
+  },
+  {
+    name: "Like 1999",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Valley",
+    image: "like-1999.png",
+  },
+  {
+    name: "Somebody Else",
+    link: "closer-to-the-picture.mp3",
+    artist: "The 1975",
+    image: "somebody-else.jpg",
+  },
+  {
+    name: "Let Your Heart Hold Fast",
+    link: "closer-to-the-picture.mp3",
+    artist: "Fort Atlantic",
+    image: "himym.jpg",
+  },
+  
 ];
 
 //events object
