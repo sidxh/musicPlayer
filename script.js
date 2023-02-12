@@ -241,7 +241,7 @@ const initializePlaylist = () => {
   for (let i in songsList) {
     playlistSongs.innerHTML += `<li class='playlistSong' onclick='setSong(${i})'>
             <div class="playlist-image-container">
-                <img src="${songsList[i].image}"/>
+                <img src="${songsList[i].image}" style="height:5rem;"/>
             </div>
             <div class="playlist-song-details">
                 <span id="playlist-song-name">

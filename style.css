@@ -11,9 +11,9 @@
     font-size: 16px;
     width: 80vw;
     max-width: 25em;
-    background: linear-gradient(to bottom, #000000 40%, #004985 50%);
+    /* background: linear-gradient(to bottom, #000000 40%, #004985 50%); */
     border: 5px solid white;
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
     padding: 3em 1.8em;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -116,7 +116,29 @@
     border-radius: 0.6em;
     padding: 2em 1em;
     font-family: "Poppins", sans-serif;
+    overflow: auto;
+    scrollbar-color: #12787b #ffffff;
   }
+
+  #playlist-container::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      #playlist-container::-webkit-scrollbar-track {
+        background-color: #ffffff;
+        border-radius: 100px;
+      }
+      
+      #playlist-container::-webkit-scrollbar-thumb {
+        background-color: #12787b;
+        border-radius: 100px;
+      }
+  
+
+  #fa-angle-down{
+    filter: brightness(0) invert(1);
+  }
+
   #close-button {
     background-color: transparent;
     border: none;
@@ -134,6 +156,8 @@
     margin: 1em 0;
     cursor: pointer;
   }
+
+
   .playlist-song-details {
     margin-left: 1em;
   }
