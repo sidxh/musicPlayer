@@ -31,16 +31,10 @@ const songsList = [
     image: "perks.jpg",
   }, 
   {
-    name: "Closer To The Picture",
-    link: "closer-to-the-picture.mp3",
+    name: "Like 1999",
+    link: "like-1999.mp3",
     artist: "The Valley",
-    image: "closer.jpg",
-  },
-  {
-    name: "Ophelia",
-    link: "ophelia.mp3",
-    artist: "The Lumineers",
-    image: "ophelia.jpg",
+    image: "like-1999.png",
   },
   {
     name: "Boots Of Spanish Leather",
@@ -50,7 +44,7 @@ const songsList = [
   },
   {
     name: "The Girl In The Car",
-    link: "closer-to-the-picture.mp3",
+    link: "the-girl-in-the-car.mp3",
     artist: "The Lumineers",
     image: "the-girl-in-the-car.jpeg",
   },
@@ -97,16 +91,16 @@ const songsList = [
     image: "you-give-love-a-bad-name.jpg",
   },
   {
+    name: "Ophelia",
+    link: "ophelia.mp3",
+    artist: "The Lumineers",
+    image: "ophelia.jpg",
+  },  
+  {
     name: "Eye Of The Tiger",
     link: "eye-of-the-tiger.mp3",
     artist: "Survivors",
     image: "eye-of-the-tiger.jpg",
-  },
-  {
-    name: "Like 1999",
-    link: "like-1999.mp3",
-    artist: "The Valley",
-    image: "like-1999.png",
   },
   {
     name: "Change Of Heart",
@@ -125,6 +119,12 @@ const songsList = [
     link: "if-you-ever-forget.mp3",
     artist: "Isak Danielson",
     image: "if-you-ever.jpg",
+  },
+  {
+    name: "Closer To The Picture",
+    link: "closer-to-the-picture.mp3",
+    artist: "The Valley",
+    image: "closer.jpg",
   },
   {
     name: "Ragged Wood",
