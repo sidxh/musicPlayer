@@ -45,12 +45,12 @@ const songsList = [
   {
     name: "The Girl In The Car",
     link: "the-girl-in-the-car.mp3",
-    artist: "The Lumineers",
+    artist: "August Kamp",
     image: "the-girl-in-the-car.jpeg",
   },
   {
     name: "Love Of My Life",
-    link: "closer-to-the-picture.mp3",
+    link: "love-of-my-life.mp3",
     artist: "The Queen",
     image: "love-of-my-life.jpg",
   },
