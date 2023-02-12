@@ -51,7 +51,7 @@ const songsList = [
   {
     name: "Love Of My Life",
     link: "love-of-my-life.mp3",
-    artist: "The Queen",
+    artist: "Queen",
     image: "love-of-my-life.jpg",
   },
   {
