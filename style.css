@@ -22,6 +22,11 @@
     border-radius: 0.5em;
     box-shadow: 0.6em 1.2em 3em rgba(0, 0, 0, 0.25);
   }
+
+  .small-head{
+    display: none;
+  }
+
   img {
     width: 100%;
     margin-top: 1.25em;
@@ -166,9 +171,23 @@
     color: #979797;
 }
 
+@media (max-width:768px){
+    .intro-div{
+        display: none;
+    }
+    .music-player{
+        top:50%;
+        left:50%;
+    }
+
+    .small-head{
+        display: block;
+        color: white;
+        font-family: 'Karla', sans-serif;
+        font-size: 1.85rem;
+        text-align: center;
+      }
+}
+
 
   
-  .playlist-image-container {
-    width: 3em;
-  }
-
