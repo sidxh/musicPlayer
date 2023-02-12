@@ -12,7 +12,8 @@
     width: 80vw;
     max-width: 25em;
     /* background: linear-gradient(to bottom, #000000 40%, #004985 50%); */
-    border: 5px solid white;
+    border: 5px solid;
+    border-color: #343434;  
     background-color: #ffffff;
     padding: 3em 1.8em;
     position: absolute;
