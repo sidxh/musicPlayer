@@ -1,24 +1,24 @@
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-const repeatButton = document.getElementById("repeat");
-const shuffleButton = document.getElementById("shuffle");
-const audio = document.getElementById("audio");
-const songImage = document.getElementById("song-image");
-const songName = document.getElementById("song-name");
-const songArtist = document.getElementById("song-artist");
-const pauseButton = document.getElementById("pause");
-const playButton = document.getElementById("play");
-const playlistButton = document.getElementById("playlist");
-const maxDuration = document.getElementById("max-duration");
-const currentTimeRef = document.getElementById("current-time");
-const progressBar = document.getElementById("progress-bar");
-const playlistContainer = document.getElementById("playlist-container");
-const closeButton = document.getElementById("close-button");
-const playlistSongs = document.getElementById("playlist-songs");
-const currentProgress = document.getElementById("current-progress");
+const prevButton = document.getElementById("prev") as HTMLButtonElement;
+const nextButton = document.getElementById("next") as HTMLButtonElement;
+const repeatButton = document.getElementById("repeat") as HTMLButtonElement;
+const shuffleButton = document.getElementById("shuffle") as HTMLButtonElement;
+const audio = document.getElementById("audio") as HTMLAudioElement;
+const songImage = document.getElementById("song-image") as HTMLImageElement;
+const songName = document.getElementById("song-name") as HTMLParagraphElement;
+const songArtist = document.getElementById("song-artist") as HTMLParagraphElement;
+const pauseButton = document.getElementById("pause") as HTMLButtonElement;
+const playButton = document.getElementById("play") as HTMLButtonElement;
+const playlistButton = document.getElementById("playlist") as HTMLButtonElement;
+const maxDuration = document.getElementById("max-duration") as HTMLSpanElement;
+const currentTimeRef = document.getElementById("current-time") as HTMLSpanElement;
+const progressBar = document.getElementById("progress-bar") as HTMLDivElement;
+const playlistContainer = document.getElementById("playlist-container") as HTMLDivElement;
+const closeButton = document.getElementById("close-button") as HTMLButtonElement;
+const playlistSongs = document.getElementById("playlist-songs") as HTMLUListElement;
+const currentProgress = document.getElementById("current-progress") as HTMLDivElement;
 
 //index for songs
-let index;
+let index: number;
 
 //initially loop=true
 let loop = true;
@@ -141,17 +141,24 @@ const songsList = [
   
 ];
 
-//events object
-let events = {
-  mouse: {
-    click: "click",
-  },
-  touch: {
-    click: "touchstart",
-  },
-};
-
-let deviceType = "";
+// events object
+let events: {
+    mouse: {
+      click: string;
+    };
+    touch: {
+      click: string;
+    };
+  } = {
+    mouse: {
+      click: "click",
+    },
+    touch: {
+      click: "touchstart",
+    },
+  };
+  
+  let deviceType: string = "";
 
 //Detect touch device
 
@@ -168,16 +175,18 @@ const isTouchDevice = () => {
 };
 
 //Format time (convert ms to seconds, minutes and add 0 id less than 10)
-const timeFormatter = (timeInput) => {
-  let minute = Math.floor(timeInput / 60);
-  minute = minute < 10 ? "0" + minute : minute;
-  let second = Math.floor(timeInput % 60);
-  second = second < 10 ? "0" + second : second;
-  return `${minute}:${second}`;
-};
+const timeFormatter = (timeInput: number) => {
+    let minutes: number = Math.floor(timeInput / 60);
+    let seconds: number = Math.floor(timeInput % 60);
+
+    const formattedMinutes: string = minutes < 10 ? `0${minutes}` : `${minutes}`;
+    const formattedSeconds: string = seconds < 10 ? `0${seconds}` : `${seconds}`;
+  
+    return `${formattedMinutes}:${formattedSeconds}`;
+  };
 
 //set song
-const setSong = (arrayIndex) => {
+const setSong = (arrayIndex: number) => {
   //this extracts all the variables from the object
   let { name, link, artist, image } = songsList[arrayIndex];
   audio.src = link;
@@ -186,7 +195,7 @@ const setSong = (arrayIndex) => {
   songImage.src = image;
   //display duration when metadata loads
   audio.onloadedmetadata = () => {
-    maxDuration.innerText = timeFormatter(audio.duration);
+  maxDuration.innerText = timeFormatter(audio.duration);
   };
 };
 
@@ -315,11 +324,11 @@ prevButton.addEventListener("click", previousSong);
 
 //if user clicks on progress bar
 isTouchDevice();
-progressBar.addEventListener(events[deviceType].click, (event) => {
+progressBar.addEventListener(events[deviceType as keyof typeof events].click, (event) => {
   //start of progressBar
   let coordStart = progressBar.getBoundingClientRect().left;
   //mouse click position
-  let coordEnd = !isTouchDevice() ? event.clientX : event.touches[0].clientX;
+  let coordEnd = !isTouchDevice() ? (event as MouseEvent).clientX : (event as TouchEvent).touches[0].clientX;
   let progress = (coordEnd - coordStart) / progressBar.offsetWidth;
 
   //set width to progress
@@ -338,7 +347,7 @@ progressBar.addEventListener(events[deviceType].click, (event) => {
 setInterval(() => {
   currentTimeRef.innerHTML = timeFormatter(audio.currentTime);
   currentProgress.style.width =
-    (audio.currentTime / audio.duration.toFixed(3)) * 100 + "%";
+  (audio.currentTime / parseFloat(audio.duration.toFixed(3))) * 100 + "%";
 });
 
 //update time
