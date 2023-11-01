@@ -21,6 +21,10 @@ var currentProgress = document.getElementById("current-progress");
 var index;
 //initially loop=true
 var loop = true;
+function loadImage(img) {
+    var actualSrc = img.getAttribute("data-src");
+    img.setAttribute("src", actualSrc);
+}
 var songsList = [
     {
         name: "Charlie's Last Letter",

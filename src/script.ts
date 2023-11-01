@@ -23,6 +23,11 @@ let index: number;
 //initially loop=true
 let loop = true;
 
+function loadImage(img: any) {
+    const actualSrc = img.getAttribute("data-src");
+    img.setAttribute("src", actualSrc);
+  }
+
 const songsList = [
   {
     name: "Charlie's Last Letter",
