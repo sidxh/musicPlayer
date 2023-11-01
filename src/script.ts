@@ -23,11 +23,6 @@ let index: number;
 //initially loop=true
 let loop = true;
 
-function loadImage(img: any) {
-    const actualSrc = img.getAttribute("data-src");
-    img.setAttribute("src", actualSrc);
-  }
-
 const songsList = [
   {
     name: "Charlie's Last Letter",
@@ -183,7 +178,7 @@ const isTouchDevice = () => {
 const timeFormatter = (timeInput: number) => {
     let minutes: number = Math.floor(timeInput / 60);
     let seconds: number = Math.floor(timeInput % 60);
-
+  
     const formattedMinutes: string = minutes < 10 ? `0${minutes}` : `${minutes}`;
     const formattedSeconds: string = seconds < 10 ? `0${seconds}` : `${seconds}`;
   
